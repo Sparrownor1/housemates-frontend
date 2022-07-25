@@ -1,29 +1,9 @@
-import React, { FC } from 'react';
+import { useAuth0 } from "@auth0/auth0-react";
 
+const Login = () => {
+  const { loginWithRedirect } = useAuth0();
 
-const Login: FC = () => {
+  return <button onClick={() => loginWithRedirect()}>Log In</button>;
+};
 
-    const sendLogin = (): void => {
-      const usernameElem: HTMLInputElement = document.getElementById("login-username") as HTMLInputElement;
-      const passwordElem: HTMLInputElement = document.getElementById("login-password") as HTMLInputElement;
-      const username: string = usernameElem.value;
-      const password: string = passwordElem.value
-      const msg: string = "attempting to login: ".concat(username, " ", password)
-
-      console.log(msg);
-    }
-
-
-    return (
-    <div>
-      <label>Username</label>
-      <input id="login-username"/>
-      <br/>
-      <label>Password</label>
-      <input id="login-password"/>
-      <br/> 
-      <button onClick={sendLogin}>Login</button>
-    </div>)
-}
-
-export default Login
+export default Login;
