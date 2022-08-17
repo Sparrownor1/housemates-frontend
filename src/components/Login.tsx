@@ -7,8 +7,14 @@ const Login: FC = () => {
     const passwordElem = document.getElementById("login-password") as HTMLInputElement;
     const username: string = usernameElem.value;
     const password: string = passwordElem.value
-    const msg: string = "attempting to login: ".concat(username, " ", password)
 
+    /*
+      Login(username, password)
+      login on some function, if no err, then use JWT to determine status
+      JWT = wristband, backend = bouncer
+    */
+
+    const msg: string = "attempting to login: ".concat(username, " ", password)
     console.log(msg);
   }
 

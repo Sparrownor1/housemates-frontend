@@ -7,12 +7,14 @@ const Register: FC = () => {
       const lastElem = document.getElementById("register-last") as HTMLInputElement;  
       const usernameElem = document.getElementById("register-username") as HTMLInputElement;
       const passwordElem = document.getElementById("register-password") as HTMLInputElement;
+
       const first: string = firstElem.value;
       const last: string = lastElem.value;
       const username: string = usernameElem.value;
       const password: string = passwordElem.value;
-      const msg: string = "attempting to register: ".concat(first, " ", last, " ", username, " ", password)
 
+
+      const msg: string = "attempting to register: ".concat(first, " ", last, " ", username, " ", password)
       console.log(msg);
     }
 

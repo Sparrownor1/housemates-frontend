@@ -22,7 +22,9 @@ export default App;
 
 /*
 TODO:
-  Add state library to maintain JWT
+  Add state library to maintain JWT -- use Recoil
   Incorporate Axios
   Do these with folder structure (modularize)
+
+  Login: 
 */
