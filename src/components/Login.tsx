@@ -4,8 +4,8 @@ import React, { FC } from 'react';
 const Login: FC = () => {
 
     const sendLogin = (): void => {
-      const usernameElem: HTMLInputElement = document.getElementById("login-username") as HTMLInputElement;
-      const passwordElem: HTMLInputElement = document.getElementById("login-password") as HTMLInputElement;
+      const usernameElem = document.getElementById("login-username") as HTMLInputElement;
+      const passwordElem = document.getElementById("login-password") as HTMLInputElement;
       const username: string = usernameElem.value;
       const password: string = passwordElem.value
       const msg: string = "attempting to login: ".concat(username, " ", password)
@@ -23,6 +23,8 @@ const Login: FC = () => {
       <input id="login-password"/>
       <br/> 
       <button onClick={sendLogin}>Login</button>
+      <br></br>
+      <a href="/register">Register</a>
     </div>)
 }
 
